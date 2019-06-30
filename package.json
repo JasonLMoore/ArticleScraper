@@ -1,0 +1,19 @@
+{
+  "name": "articlescraper",
+  "version": "1.0.0",
+  "description": "web app that scrapes articles and then lets users leave comments on said articles (HW)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonLMoore/ArticleScraper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasonLMoore/ArticleScraper/issues"
+  },
+  "homepage": "https://github.com/JasonLMoore/ArticleScraper#readme"
+}
