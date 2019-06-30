@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JasonLMoore/ArticleScraper/issues"
   },
-  "homepage": "https://github.com/JasonLMoore/ArticleScraper#readme"
+  "homepage": "https://github.com/JasonLMoore/ArticleScraper#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
