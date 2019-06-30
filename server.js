@@ -36,7 +36,7 @@ app.get("/scrape", function(req, res) {
   //grab html body//
   axios.get("https://www.nba.com/#/").then(function(response) {
     //load into cherrio//save to $ for shorthand//
-    const $ = cherrio.load(response.data);
+    const $ = cheerio.load(response.data);
 
     //grab every a within a content_list tag//
     $("content_list a").each(function(i, element) {
