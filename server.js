@@ -90,3 +90,23 @@ app.get("/articles/:id", function(req, res) {
       res.json(err);
     });
 });
+
+//Route for saving/updating Article's comments//
+app.post("/articles/:id", function(req, res) {
+  //create new comment and pass req.body to entry//
+  db.Comment.create(req.body)
+    .then(function(dbComment) {
+      return db.Article.findOneAndUpdate({ _id: req.params.id }, { note: dbComment._id }, { new: true });
+    })
+    .then(function(dbArticle) {
+      res.json(dbArticle);
+    })
+    .catch(function(err) {
+      res.json(err);
+    });
+});
+
+//Start the server//
+app.listen(PORT, function() {
+  console.log("App running on port " + PORT + "!");
+});
