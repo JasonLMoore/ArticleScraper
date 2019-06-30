@@ -10,7 +10,7 @@ const cheerio = require("cheerio");
 const db = require("./models");
 
 //PORT will need to change for Heroku//
-const PORT = 8080;
+const PORT = 3000;
 //////////////////
 
 //init Express//
@@ -23,7 +23,7 @@ app.use(logger("dev"));
 app.use(express.urlencoded({ extended:true }));
 app.use(express.json());
 //make public folder static//
-app.use(express.statuc("public"));
+app.use(express.static("public"));
 
 //connect to the Mongo db//will need to change//
 mongoose.connect("mongodb://", { useNewUrlParser: true});
